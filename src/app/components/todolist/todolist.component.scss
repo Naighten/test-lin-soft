@@ -1,0 +1,19 @@
+.todolist__wrapper {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   gap: 20px;
+}
+
+.todolist__list {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 10;
+}
+
+.sortlist {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}

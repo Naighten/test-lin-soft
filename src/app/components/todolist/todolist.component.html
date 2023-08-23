@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="todolist__wrapper">
+		<button class="todolist__button todolist__button-new" (click)="addTodo()">
+			Добавить
+		</button>
+
+		<div class="sortlist">
+			<button type="button" class="sortlist__btn" (click)="sort(0)">
+				Все
+			</button>
+			<button type="button" class="sortlist__btn" (click)="sort(1)">
+				Активные
+			</button>
+			<button type="button" class="sortlist__btn" (click)="sort(2)">
+				Выполненные
+			</button>
+		</div>
+
+		<div class="todolist__list" *ngIf="sortedtodolist.length != 0">
+			<app-todoitem
+				*ngFor="let todo of sortedtodolist"
+				(emitEditTodo)="editTodo($event)"
+				(emitRemoveTodo)="removeTodo($event)"
+				[todo]="todo"
+			></app-todoitem>
+		</div>
+		<p *ngIf="sortedtodolist.length == 0" style="text-align: center">
+			Записей нет
+		</p>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="todoitem">
+	<input
+		type="checkbox"
+		[(ngModel)]="todo.isCompleted"
+		class="todoitem__input-check"
+	/>
+
+	<div class="todoitem__body">
+		<h2 class="todoitem__title" [ngClass]="{ lineThrough: todo.isCompleted }">
+			{{ todo.title }}
+		</h2>
+		<p class="todoitem__text" [ngClass]="{ lineThrough: todo.isCompleted }">
+			{{ todo.body }}
+		</p>
+	</div>
+
+	<div class="todoitem__btns">
+		<button type="button" (click)="removeTodo(todo)" class="todoitem__btn">
+			Удалить
+		</button>
+		<button type="button" (click)="editTodo(todo)" class="todoitem__btn">
+			Редактировать
+		</button>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="todoedit__wrapper">
+		<form action="" [formGroup]="todo" class="todoedit__form">
+			<label for="title"
+				>Заголовок
+				<input
+					name="title"
+					type="text"
+					class="todoedit__input"
+					formControlName="title"
+				/>
+			</label>
+
+			<label for="body"
+				>Тело
+				<textarea
+					name="body"
+					id=""
+					class="todoedit__textarea"
+					formControlName="body"
+				></textarea>
+			</label>
+
+			<button
+				class="todoedit__btn"
+				(click)="saveTodo()"
+				[disabled]="!todo.valid"
+			>
+				Сохранить
+			</button>
+		</form>
+	</div>
+</div>

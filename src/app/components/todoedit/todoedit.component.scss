@@ -1,0 +1,26 @@
+.todoedit__wrapper {
+   height: 60%;
+   max-height: 1000px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.todoedit__form {
+   display: flex;
+   align-items: center;
+   border: 1px solid;
+   border-radius: 10px;
+   padding: 20px;
+}
+
+label {
+   display: flex;
+   flex-direction: column;
+}
+
+.todoedit__input,
+.todoedit__textarea {
+   margin-right: 50px;
+   border: 1px solid;
+}
