@@ -16,11 +16,13 @@ export class TodolistComponent implements OnInit, OnDestroy {
 
 	ngOnInit(): void {
 		this.getTodoList();
-		this.sortedtodolist = [...this.todolist];
 	}
 
 	getTodoList() {
 		this.todolist = this.todoService.getTodoList();
+		this.sortedtodolist = [...this.todolist];
+		console.log(1, this.todolist);
+		console.log(2, this.sortedtodolist);
 	}
 
 	addTodo() {
